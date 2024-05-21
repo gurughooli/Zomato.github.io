@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-section {
+            background-image: url(https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 100px 20px 40px;
+            font-family: fantasy;
+            color: white;
+        }
+
+        .top-section .header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: flex-start;
+        }
+
+        .top-section .buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .top-section .title {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .top-section .search-container {
+            display: flex;
+            gap: 10px;
+            border: 2px solid white;
+            border-radius: 8px;
+            padding: 10px;
+        }
+
+        .search-container select,
+        .search-container input {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .search-container input {
+            padding-right: 120px;
+        }
+
+        .bottom-section {
+            background-color: #ccc;
+            padding: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .bottom-section .container {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .bottom-section .box img {
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            border: 2px solid;
+            border-radius: 15px;
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .bottom-section .box img:hover {
+            transform: scale(1.1); /* Scale up the image on hover */
+        }
+
+        .bottom-section .description {
+            margin-top: 10px;
+            font-size: 17px;
+            font-family:"Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
+            color: rgb(56, 55, 55);
+            text-align: left;
+            padding-left: 50px;
+        }
+
+        .collections {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #ccc;
+        }
+
+        .collections h1 {
+            margin: 0;
+            padding-right: 990px;
+            font-family:"Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
+        }
+
+        .bottom-sections {
+            background-color: #ccc;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .bottom-sections .container1 {
+            display: flex;
+            flex-direction: column;
+            width: 22%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .bottom-sections .box {
+            position: relative;
+        }
+
+        .bottom-sections .box img {
+            width: 100%;
+            max-width: 300px;
+            height: 250px;
+            border: 2px solid;
+            border-radius: 15px;
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .bottom-sections .box img:hover {
+            transform: scale(1.1); /* Scale up the image on hover */
+        }
+
+        .bottom-sections .box p {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            margin: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px 0;
+        }
+
+        .collections span {
+            display: inline-flex;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="top-section">
+        <div class="header">
+            <span>Get App</span>
+            <div class="buttons">
+               <a href="project_Login.html"><span>Login</span></a> 
+                <span>Sign up</span>
+                <span>Add Restaurant</span>
+            </div>
+        </div>
+        <img id="pic" src="zomato.png" width="200px" height="200px" alt="">
+        <p class="title">Discover the best food & Drinks in Bengaluru</p>
+        <div class="search-container">
+            <select id="location-filter" class="location-filter">
+                <option value="">Locations</option>
+                <option value="bengaluru">Bengaluru</option>
+                <option value="mysore">Mysore</option>
+                <option value="vijayapura">Vijayapura</option>
+                <option value="dharwad">Dharwad</option>
+                <option value="hubli">Hubli</option>
+            </select>
+            <input type="text" id="search-box" class="search-box" placeholder="Search for restaurants...">
+        </div>
+    </div>
+    <div class="bottom-section">
+        <div class="container">
+            <div class="box">
+                <img src="orderimage.jpg" alt="Raahi">
+            </div>
+            <div class="description">
+                <span>Order Food</span> <br>
+                <p>Stay home and order to your doorstep</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box">
+                <img src="dining.jpg" alt="Scottish Pub">
+            </div>
+            <div class="description">
+                <span>Dining</span> <br>
+                <p>View the city's favorite dining venue</p>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box">
+                <img src="nightlife_and_club.jpg" alt="Moglu"> 
+            </div>
+            <div class="description">
+                <span>Nightlife & Club</span> <br>
+                <p>Explore the city's top Nightlife outlets</p>
+            </div>
+        </div>
+    </div> 
+    <div class="collections">
+        <h1>Collections</h1>
+        <span style="margin-right: 300px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Explore curated lists of top restaurants, cafes, pubs, and bars in Bengaluru, based on trends</span>
+        <span style=" font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">All collections in Bengaluru</span>
+    </div>
+    <div class="bottom-sections">
+        <div class="container1">
+            <div class="box">
+                <img src="BestofLiveScreening.jpg" alt="">
+                <p>Best of live Screening</p>
+            </div>
+        </div>
+        <div class="container1">
+            <div class="box">
+                <img src="toptrend.jpg" alt="">
+                <p>Top Trending</p>
+            </div>
+        </div>
+        <div class="container1">
+            <div class="box">
+                <img src="NW.jpg" alt="">
+                <p>Newly Opened</p>
+            </div>
+        </div>
+        <div class="container1">
+            <div class="box">
+                <img src="bestRoofTop.jpg" alt="">
+                <p>Best Rooftop</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
